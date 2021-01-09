@@ -38,9 +38,29 @@ public class FirstSteps {
 
         //5th case
 
+//        Scanner scan = new Scanner(System.in);
+//        String name = scan.nextLine();
+//        System.out.println("Hello "+name);
+
+        //6th case
+
+//        Scanner scan = new Scanner(System.in);
+//        String firstname = scan.nextLine();
+//        String lastname = scan.nextLine();
+//        int age = Integer.parseInt(scan.nextLine());
+//        String town = scan.nextLine();
+//
+//        System.out.printf("You are %s %s, a %s-years old person from %s.", firstname, lastname, age, town);
+
+
+        //7th case
+
         Scanner scan = new Scanner(System.in);
-        String name = scan.nextLine();
-        System.out.println("Hello "+name);
+        String archName = scan.nextLine();
+        int projects = Integer.parseInt(scan.nextLine());
+        int hours = projects * 3;
+
+        System.out.printf("The architect %s will need %s hours to complete %s project/s.", archName, hours, projects);
 
 
     }
