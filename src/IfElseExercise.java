@@ -117,24 +117,24 @@ public class IfElseExercise {
         //6th case
 
 
-        Scanner scan = new Scanner(System.in);
-
-        double budget = Double.parseDouble(scan.nextLine());
-        int people = Integer.parseInt(scan.nextLine());
-        double clothsPrice = Double.parseDouble(scan.nextLine());
-        double decor = budget * 0.1;
-
-        if (people > 150) {
-            clothsPrice = clothsPrice * (1 - 0.1);
-        }
-        double totalAmount = people * clothsPrice + decor;
-        if (budget < totalAmount) {
-            System.out.println("Not enough money!");
-            System.out.printf("Wingard needs %.2f leva more.", totalAmount - budget);
-        } else {
-            System.out.println("Action!");
-            System.out.printf("Wingard starts filming with %.2f leva left.", budget - totalAmount);
-        }
+//        Scanner scan = new Scanner(System.in);
+//
+//        double budget = Double.parseDouble(scan.nextLine());
+//        int people = Integer.parseInt(scan.nextLine());
+//        double clothsPrice = Double.parseDouble(scan.nextLine());
+//        double decor = budget * 0.1;
+//
+//        if (people > 150) {
+//            clothsPrice = clothsPrice * (1 - 0.1);
+//        }
+//        double totalAmount = people * clothsPrice + decor;
+//        if (budget < totalAmount) {
+//            System.out.println("Not enough money!");
+//            System.out.printf("Wingard needs %.2f leva more.", totalAmount - budget);
+//        } else {
+//            System.out.println("Action!");
+//            System.out.printf("Wingard starts filming with %.2f leva left.", budget - totalAmount);
+//        }
 
 
 
