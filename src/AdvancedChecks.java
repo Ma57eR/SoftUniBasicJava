@@ -268,6 +268,246 @@ public class AdvancedChecks {
 //        }
 
 
+        //10th case
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        int num = Integer.parseInt(scan.nextLine());
+//
+//        if ((num >= 100 && num <= 200) || num == 0) {
+//
+//        } else {
+//            System.out.println("invalid");
+//        }
+
+        //11th case
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        String fruit = scan.nextLine();
+//        String day = scan.nextLine();
+//        double quantity = Double.parseDouble(scan.nextLine());
+//        double price = 0;
+//        double finalPrice =0;
+//
+//        switch (day) {
+//            case "Monday":
+//            case "Tuesday":
+//            case "Wednesday":
+//            case "Thursday":
+//            case "Friday":
+//                switch (fruit) {
+//                    case "banana":
+//                        price = 2.50;
+//                        break;
+//
+//                    case "apple":
+//                        price = 1.2;
+//                        break;
+//
+//                    case "orange":
+//                        price = 0.85;
+//                        break;
+//
+//                    case "grapefruit":
+//                        price = 1.45;
+//                        break;
+//
+//                    case "kiwi":
+//                        price = 2.70;
+//                        break;
+//
+//                    case "pineapple":
+//                        price = 5.50;
+//                        break;
+//
+//                    case "grapes":
+//                        price = 3.85;
+//                        break;
+//                    default:
+//                        System.out.println("error");
+//
+//                }
+//                finalPrice = price * quantity;
+//                if (finalPrice == 0) {
+//                } else {
+//                    System.out.printf("%.2f",price * quantity);
+//                }
+//                break;
+//
+//            case "Saturday":
+//            case "Sunday":
+//                switch (fruit) {
+//                    case "banana":
+//                        price = 2.70;
+//                        break;
+//
+//                    case "apple":
+//                        price = 1.25;
+//                        break;
+//
+//                    case "orange":
+//                        price = 0.90;
+//                        break;
+//
+//                    case "grapefruit":
+//                        price = 1.60;
+//                        break;
+//
+//                    case "kiwi":
+//                        price = 3.00;
+//                        break;
+//
+//                    case "pineapple":
+//                        price = 5.60;
+//                        break;
+//
+//                    case "grapes":
+//                        price = 4.20;
+//                        break;
+//                    default:
+//                        System.out.println("error");
+//
+//                }
+//
+//                finalPrice = price * quantity;
+//                if (finalPrice == 0) {
+//                } else {
+//                    System.out.printf("%.2f",price * quantity);
+//                }
+//                break;
+//            default:
+//                System.out.println("error");
+//        }
+
+
+        //12th case
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        String city = scan.nextLine();
+//        double sales = Double.parseDouble(scan.nextLine());
+//        double commission = 0;
+//
+//        switch (city) {
+//            case "Sofia":
+//                if (sales > 0 && sales <= 500) {
+//                    commission = 0.05;
+//                } else if (sales > 500 && sales <= 1000) {
+//                    commission = 0.07;
+//                } else if (sales > 1000 && sales <= 10000) {
+//                    commission = 0.08;
+//                } else if (sales > 10000) {
+//                    commission = 0.12;
+//                } else {
+//                    System.out.println("error");
+//                }
+//                if (commission != 0) {
+//                    System.out.printf("%.2f", sales * commission);
+//                }
+//                break;
+//
+//            case "Varna":
+//                if (sales > 0 && sales <= 500) {
+//                    commission = 0.045;
+//                } else if (sales > 500 && sales <= 1000) {
+//                    commission = 0.075;
+//                } else if (sales > 1000 && sales <= 10000) {
+//                    commission = 0.10;
+//                } else if (sales > 10000) {
+//                    commission = 0.13;
+//                } else {
+//                    System.out.println("error");
+//                }
+//                if (commission != 0) {
+//                    System.out.printf("%.2f", sales * commission);
+//                }
+//                break;
+//
+//            case "Plovdiv":
+//                if (sales > 0 && sales <= 500) {
+//                    commission = 0.055;
+//                } else if (sales > 500 && sales <= 1000) {
+//                    commission = 0.08;
+//                } else if (sales > 1000 && sales <= 10000) {
+//                    commission = 0.12;
+//                } else if (sales > 10000) {
+//                    commission = 0.145;
+//                } else {
+//                    System.out.println("error");
+//                }
+//                if (commission != 0) {
+//                    System.out.printf("%.2f", sales * commission);
+//                }
+//                break;
+//            default:
+//                System.out.println("error");
+//        }
+
+        //13th case
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        int days = Integer.parseInt(scan.nextLine());
+//        int nights = days - 1;
+//        String roomType = scan.nextLine();
+//        String rating = scan.nextLine();
+//        double pricePerNight = 0;
+//        double discount = 0;
+//        double finalPrice=0;
+//
+//
+//        switch (roomType) {
+//            case "room for one person":
+//                if (days < 10) {
+//                    pricePerNight = 18;
+//                    finalPrice = nights * pricePerNight;
+//                } else if (days >= 10 && days <= 15) {
+//                    pricePerNight = 18;
+//                    finalPrice = nights * pricePerNight;
+//                } else if (days >15) {
+//                    pricePerNight = 18;
+//                    finalPrice = nights * pricePerNight;
+//                }
+//                break;
+//            case "apartment":
+//                if (days < 10) {
+//                    pricePerNight = 25;
+//                    discount = 1 - 0.3;
+//                    finalPrice = nights * pricePerNight * discount;
+//                } else if (days >= 10 && days <= 15) {
+//                    pricePerNight = 25;
+//                    discount = 1 - 0.35;
+//                    finalPrice = nights * pricePerNight * discount;
+//                } else if (days >15) {
+//                    pricePerNight = 25;
+//                    discount = 1 - 0.5;
+//                    finalPrice = nights * pricePerNight * discount;
+//                }
+//                break;
+//            case "president apartment":
+//                if (days < 10) {
+//                    pricePerNight = 35;
+//                    discount = 1 - 0.1;
+//                    finalPrice = nights * pricePerNight * discount;
+//                } else if (days >= 10 && days <= 15) {
+//                    pricePerNight = 35;
+//                    discount = 1 - 0.15;
+//                    finalPrice = nights * pricePerNight * discount;
+//                } else if (days >15) {
+//                    pricePerNight = 35;
+//                    discount = 1 - 0.2;
+//                    finalPrice = nights * pricePerNight * discount;
+//                }
+//                break;
+//            default:
+//        }
+//        if (rating.equals("positive")) {
+//           finalPrice *= 1.25;
+//        } else if (rating.equals("negative")) {
+//            finalPrice *= 0.90;
+//        }
+//        System.out.printf("%.2f", finalPrice);
 
     }
 
