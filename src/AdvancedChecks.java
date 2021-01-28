@@ -383,66 +383,66 @@ public class AdvancedChecks {
 
         //12th case
 
-//        Scanner scan = new Scanner(System.in);
-//
-//        String city = scan.nextLine();
-//        double sales = Double.parseDouble(scan.nextLine());
-//        double commission = 0;
-//
-//        switch (city) {
-//            case "Sofia":
-//                if (sales > 0 && sales <= 500) {
-//                    commission = 0.05;
-//                } else if (sales > 500 && sales <= 1000) {
-//                    commission = 0.07;
-//                } else if (sales > 1000 && sales <= 10000) {
-//                    commission = 0.08;
-//                } else if (sales > 10000) {
-//                    commission = 0.12;
-//                } else {
-//                    System.out.println("error");
-//                }
-//                if (commission != 0) {
-//                    System.out.printf("%.2f", sales * commission);
-//                }
-//                break;
-//
-//            case "Varna":
-//                if (sales > 0 && sales <= 500) {
-//                    commission = 0.045;
-//                } else if (sales > 500 && sales <= 1000) {
-//                    commission = 0.075;
-//                } else if (sales > 1000 && sales <= 10000) {
-//                    commission = 0.10;
-//                } else if (sales > 10000) {
-//                    commission = 0.13;
-//                } else {
-//                    System.out.println("error");
-//                }
-//                if (commission != 0) {
-//                    System.out.printf("%.2f", sales * commission);
-//                }
-//                break;
-//
-//            case "Plovdiv":
-//                if (sales > 0 && sales <= 500) {
-//                    commission = 0.055;
-//                } else if (sales > 500 && sales <= 1000) {
-//                    commission = 0.08;
-//                } else if (sales > 1000 && sales <= 10000) {
-//                    commission = 0.12;
-//                } else if (sales > 10000) {
-//                    commission = 0.145;
-//                } else {
-//                    System.out.println("error");
-//                }
-//                if (commission != 0) {
-//                    System.out.printf("%.2f", sales * commission);
-//                }
-//                break;
-//            default:
-//                System.out.println("error");
-//        }
+        Scanner scan = new Scanner(System.in);
+
+        String city = scan.nextLine();
+        double sales = Double.parseDouble(scan.nextLine());
+        double commission = 0;
+
+        switch (city) {
+            case "Sofia":
+                if (sales > 0 && sales <= 500) {
+                    commission = 0.05;
+                } else if (sales > 500 && sales <= 1000) {
+                    commission = 0.07;
+                } else if (sales > 1000 && sales <= 10000) {
+                    commission = 0.08;
+                } else if (sales > 10000) {
+                    commission = 0.12;
+                } else {
+                    System.out.println("error");
+                }
+                if (commission != 0) {
+                    System.out.printf("%.2f", sales * commission);
+                }
+                break;
+
+            case "Varna":
+                if (sales > 0 && sales <= 500) {
+                    commission = 0.045;
+                } else if (sales > 500 && sales <= 1000) {
+                    commission = 0.075;
+                } else if (sales > 1000 && sales <= 10000) {
+                    commission = 0.10;
+                } else if (sales > 10000) {
+                    commission = 0.13;
+                } else {
+                    System.out.println("error");
+                }
+                if (commission != 0) {
+                    System.out.printf("%.2f", sales * commission);
+                }
+                break;
+
+            case "Plovdiv":
+                if (sales > 0 && sales <= 500) {
+                    commission = 0.055;
+                } else if (sales > 500 && sales <= 1000) {
+                    commission = 0.08;
+                } else if (sales > 1000 && sales <= 10000) {
+                    commission = 0.12;
+                } else if (sales > 10000) {
+                    commission = 0.145;
+                } else {
+                    System.out.println("error");
+                }
+                if (commission != 0) {
+                    System.out.printf("%.2f", sales * commission);
+                }
+                break;
+            default:
+                System.out.println("error");
+        }
 
         //13th case
 
@@ -508,6 +508,43 @@ public class AdvancedChecks {
 //            finalPrice *= 0.90;
 //        }
 //        System.out.printf("%.2f", finalPrice);
+
+
+
+
+//                Scanner scan = new Scanner(System.in);
+//
+//                double dohod = Double.parseDouble(scan.nextLine());
+//                double uspeh = Double.parseDouble(scan.nextLine());
+//                double minSalary = Double.parseDouble(scan.nextLine());
+//                double socStip = 0;
+//                double uspehStip = 0;
+//
+//                if (dohod < minSalary && uspeh > 4.5) {
+//                    socStip = Math.floor(minSalary * 0.35);
+//                    if (uspeh >= 5.5) {
+//                        uspehStip = Math.floor(uspeh * 25);
+//                        if (uspehStip >= socStip) {
+//                            System.out.printf("You get a scholarship for excellent results %.0f BGN", uspehStip);
+//                        } else {
+//                            System.out.printf("You get a Social scholarship %.0f BGN", socStip);
+//                        }
+//
+//                    } else {
+//                        System.out.printf("You get a Social scholarship %.0f BGN", socStip);
+//                    }
+//                } else if (uspeh >= 5.5) {
+//                    uspehStip = Math.floor(uspeh * 25);
+//                    System.out.printf("You get a scholarship for excellent results %.0f BGN", uspehStip);
+//                } else {
+//                    System.out.println("You cannot get a scholarship!");
+//                }
+//
+
+
+
+
+
 
     }
 
