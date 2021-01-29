@@ -217,50 +217,50 @@ public class AdvancedChecksExercise {
         //5th case Holiday
 
 
-        Scanner scan = new Scanner(System.in);
-
-        double budget = Double.parseDouble(scan.nextLine());
-        String season = scan.nextLine();
-        String destination;
-        double cost = 0.0;
-        String type = null;
-
-        if (budget <= 100) {
-            destination = "Bulgaria";
-        } else if (budget <= 1000) {
-            destination = "Balkans";
-        } else {
-            destination = "Europe";
-        }
-
-        switch (destination) {
-            case "Bulgaria":
-                if (season.equals("summer")) {
-                    cost = budget * 0.30;
-                    type = "Camp";
-                } else if (season.equals("winter")) {
-                    cost = budget * 0.70;
-                    type = "Hotel";
-                }
-                break;
-            case "Balkans":
-                if (season.equals("summer")) {
-                    cost = budget * 0.40;
-                    type = "Camp";
-                } else if (season.equals("winter")) {
-                    cost = budget * 0.80;
-                    type = "Hotel";
-                }
-                break;
-            case "Europe":
-                cost = budget * 0.90;
-                type = "Hotel";
-                break;
-            default:
-                System.out.println("error");
-        }
-        System.out.printf("Somewhere in %s%n", destination);
-        System.out.printf("%s - %.2f", type, cost);
+//        Scanner scan = new Scanner(System.in);
+//
+//        double budget = Double.parseDouble(scan.nextLine());
+//        String season = scan.nextLine();
+//        String destination;
+//        double cost = 0.0;
+//        String type = null;
+//
+//        if (budget <= 100) {
+//            destination = "Bulgaria";
+//        } else if (budget <= 1000) {
+//            destination = "Balkans";
+//        } else {
+//            destination = "Europe";
+//        }
+//
+//        switch (destination) {
+//            case "Bulgaria":
+//                if (season.equals("summer")) {
+//                    cost = budget * 0.30;
+//                    type = "Camp";
+//                } else if (season.equals("winter")) {
+//                    cost = budget * 0.70;
+//                    type = "Hotel";
+//                }
+//                break;
+//            case "Balkans":
+//                if (season.equals("summer")) {
+//                    cost = budget * 0.40;
+//                    type = "Camp";
+//                } else if (season.equals("winter")) {
+//                    cost = budget * 0.80;
+//                    type = "Hotel";
+//                }
+//                break;
+//            case "Europe":
+//                cost = budget * 0.90;
+//                type = "Hotel";
+//                break;
+//            default:
+//                System.out.println("error");
+//        }
+//        System.out.printf("Somewhere in %s%n", destination);
+//        System.out.printf("%s - %.2f", type, cost);
 
 
 
