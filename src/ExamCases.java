@@ -198,6 +198,135 @@ public class ExamCases {
 //        System.out.printf("%.2f%%%n", (k2 / totalmembers) * 100);
 //        System.out.printf("%.2f%%%n", (everest / totalmembers) * 100);
 
+        //05. Care of Puppy
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        int f = Integer.parseInt(scan.nextLine());
+//        int food = f * 1000;
+//        boolean adopted;
+//        int foodLeft = 0;
+//        int eatenFood = 0;
+//        int totalEaten = 0;
+//
+//        for (int i = 0; i < food; i++) {
+//
+//
+//            String eaten = scan.nextLine();
+//            if (eaten.equals("Adopted")) {
+//                break;
+//            } else {
+//            eatenFood = Integer.parseInt(eaten);
+//            totalEaten += eatenFood;
+//            foodLeft = food - totalEaten;
+//
+//            }
+//
+//        }
+//        if (foodLeft < 0) {
+//            System.out.printf("Food is not enough. You need %d grams more.", Math.abs(foodLeft));
+//        } else {
+//            System.out.printf("Food is enough! Leftovers: %d grams.", Math.abs(foodLeft));
+//        }
+
+        //Extra exam 13. PrimeNumbers
+
+//        Scanner scan = new Scanner(System.in);
+//        int a = Integer.parseInt(scan.nextLine());
+//        int b = Integer.parseInt(scan.nextLine());
+//        int a2 = Integer.parseInt(scan.nextLine());
+//        int b2 = Integer.parseInt(scan.nextLine());
+//        int maxA = a + a2;
+//        int maxB = b + b2;
+//        int counterA = 0;
+//        int counterB = 0;
+//        int primeA = 0;
+//        int primeB = 0;
+//
+//        for (int i = a; i <= maxA; i++) {
+//            for (int j = 2; j <= a / 2; j++) {
+//                if (i % j == 0) {
+//                    counterA++;
+//                } else {
+//                    primeA = i;
+//                }
+//            }
+//            if (counterA == 0) {
+//                for (int k = b; k <= maxB; k++) {
+//                    for (int l = 2; l <= b / 2; l++) {
+//
+//                        if (k % l == 0) {
+//                            counterB++;
+//                        } else {
+//                            primeB = k;
+//                        }
+//                    }
+//                    if (counterB == 0) {
+//                        System.out.print(primeA);
+//                        System.out.printf("%d%n", primeB);
+//
+//                        primeB = 0;
+//
+//                        counterB = 0;
+//                    } else {
+//                        counterB = 0;
+//                    }
+//                }
+//                primeA = 0;
+//
+//
+//
+//            }
+//            counterA = 0;
+//            counterB = 0;
+//
+//
+//        }
+
+
+        //05. Suitcases Load
+
+        Scanner scan = new Scanner(System.in);
+
+        double totalSize = Double.parseDouble(scan.nextLine());
+        double suitCaseSize = 0;
+        int countSuitCase = 0;
+
+        for (int i = 0; i < totalSize+countSuitCase; i++) {
+            String suitCaseSize1 = scan.nextLine();
+            if (!suitCaseSize1.equals("End")) {
+                suitCaseSize = Double.parseDouble(suitCaseSize1);
+            } else {
+                System.out.printf("Congratulations! All suitcases are loaded!%n");
+                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
+                break;
+            }
+
+
+            countSuitCase += 1;
+            if (countSuitCase % 3 == 0) {
+                suitCaseSize = suitCaseSize * 1.10;
+            }
+            totalSize -= suitCaseSize;
+
+
+
+            //String end = Double.toString(suitCaseSize);
+            if (totalSize < 0) {
+                countSuitCase -= 1;
+                System.out.println("No more space!");
+                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
+            }
+//            else if (suitCaseSize1.equals("End")) {
+//                System.out.printf("Congratulations! All suitcases are loaded!%n");
+//                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
+//                break;
+//            }
+
+        }
+
+
+
     }
 
 }
