@@ -286,44 +286,40 @@ public class ExamCases {
 
         //05. Suitcases Load
 
-        Scanner scan = new Scanner(System.in);
-
-        double totalSize = Double.parseDouble(scan.nextLine());
-        double suitCaseSize = 0;
-        int countSuitCase = 0;
-
-        for (int i = 0; i < totalSize+countSuitCase; i++) {
-            String suitCaseSize1 = scan.nextLine();
-            if (!suitCaseSize1.equals("End")) {
-                suitCaseSize = Double.parseDouble(suitCaseSize1);
-            } else {
-                System.out.printf("Congratulations! All suitcases are loaded!%n");
-                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
-                break;
-            }
-
-
-            countSuitCase += 1;
-            if (countSuitCase % 3 == 0) {
-                suitCaseSize = suitCaseSize * 1.10;
-            }
-            totalSize -= suitCaseSize;
-
-
-
-            //String end = Double.toString(suitCaseSize);
-            if (totalSize < 0) {
-                countSuitCase -= 1;
-                System.out.println("No more space!");
-                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
-            }
-//            else if (suitCaseSize1.equals("End")) {
+//        Scanner scan = new Scanner(System.in);
+//
+//        double totalSize = Double.parseDouble(scan.nextLine());
+//        double suitCaseSize = 0;
+//        int countSuitCase = 0;
+//
+//        for (int i = 0; i < totalSize+countSuitCase; i++) {
+//            String suitCaseSize1 = scan.nextLine();
+//            if (!suitCaseSize1.equals("End")) {
+//                suitCaseSize = Double.parseDouble(suitCaseSize1);
+//            } else {
 //                System.out.printf("Congratulations! All suitcases are loaded!%n");
 //                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
 //                break;
 //            }
-
-        }
+//
+//
+//            countSuitCase += 1;
+//            if (countSuitCase % 3 == 0) {
+//                suitCaseSize = suitCaseSize * 1.10;
+//            }
+//            totalSize -= suitCaseSize;
+//
+//
+//
+//            //String end = Double.toString(suitCaseSize);
+//            if (totalSize < 0) {
+//                countSuitCase -= 1;
+//                System.out.println("No more space!");
+//                System.out.printf("Statistic: %d suitcases loaded.", countSuitCase);
+//            }
+//
+//
+//        }
 
 
 
