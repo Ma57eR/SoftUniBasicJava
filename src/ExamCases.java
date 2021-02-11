@@ -322,6 +322,50 @@ public class ExamCases {
 //        }
 
 
+        //04. Cinema Voucher
+
+        Scanner scan = new Scanner(System.in);
+        int voucherMoney = Integer.parseInt(scan.nextLine());
+        String input = scan.nextLine();
+        char character;
+        int amount =0;
+        int ticket = 0;
+        int other = 0;
+
+
+
+
+        while (!input.equals("End")) {
+
+            if (input.length() > 8) {
+                for (int i = 0; i < 2; i++) {
+                    character = input.charAt(i);
+                    amount += (int) character;
+                    if (voucherMoney < amount) {
+                        break;
+                    }
+                }
+                ticket++;
+            } else {
+                for (int i = 0; i < 1; i++) {
+                    character = input.charAt(i);
+                    amount += (int) character;
+                    if (voucherMoney < amount) {
+                        break;
+                    }
+                }
+                other++;
+            }
+
+
+            if (voucherMoney > amount) {
+                input = scan.nextLine();
+            }
+
+        }
+        System.out.println(ticket);
+        System.out.println(other);
+
 
     }
 

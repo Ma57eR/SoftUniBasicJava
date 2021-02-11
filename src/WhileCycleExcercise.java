@@ -63,43 +63,111 @@ public class WhileCycleExcercise {
 
         //03. Vacation
 
+//        Scanner scan = new Scanner(System.in);
+//        double moneyForVacation = Double.parseDouble(scan.nextLine());
+//        double startingMoney = Double.parseDouble(scan.nextLine());
+//        String saveOrSpend = scan.nextLine();
+//        boolean enoughMoney = true;
+//        int count = 0;
+//        int lastCount =0;
+//        int spend = 0;
+//
+//        while (enoughMoney) {
+//            count++;
+//
+//            int money = Integer.parseInt(scan.nextLine());
+//            if (saveOrSpend.equals("save")) {
+//                startingMoney += money;
+//                if (startingMoney >= moneyForVacation) {
+//                    System.out.printf("You saved the money for %d days.", count);
+//                    break;
+//                }
+//            } else if (saveOrSpend.equals("spend")) {
+//                if (startingMoney < money) {
+//                    startingMoney = 0;
+//                } else {
+//               startingMoney -= money;
+//                }
+//            }
+//            if (saveOrSpend.equals("spend")) {
+//                spend++;
+//                if (spend == 5) {
+//                    System.out.println("You can't save the money.");
+//                    System.out.println(count);
+//                    break;
+//                }
+//            } else {
+//                spend = 0;
+//            }
+//            saveOrSpend = scan.nextLine();
+//
+//        }
+
+        //04. Walking
+
+//        Scanner scan = new Scanner(System.in);
+//        boolean goHome = false;
+//        int steps = 0;
+//        int totalSteps = 0;
+
+//        while (!goHome) {
+//
+//            String input = scan.nextLine();
+//
+//            if (input.equals("Going home")) {
+//                steps = Integer.parseInt(scan.nextLine());
+//                totalSteps += steps;
+//                if (totalSteps >= 10000) {
+//                    System.out.println("Goal reached! Good job!");
+//                    System.out.printf("%d steps over the goal!", totalSteps - 10000);
+//                } else {
+//                    System.out.printf("%d more steps to reach goal.", 10000 - totalSteps);
+//                    break;
+//                }
+//                break;
+//            }
+//
+//            steps = Integer.parseInt(input);
+//            totalSteps += steps;
+//            if (totalSteps >= 10000) {
+//                System.out.println("Goal reached! Good job!");
+//                System.out.printf("%d steps over the goal!", totalSteps - 10000);
+//                break;
+//            }
+//
+//
+//        }
+
+        //06. Cake
+
         Scanner scan = new Scanner(System.in);
-        double moneyForVacation = Double.parseDouble(scan.nextLine());
-        double startingMoney = Double.parseDouble(scan.nextLine());
-        String saveOrSpend = scan.nextLine();
-        boolean enoughMoney = true;
-        int count = 0;
-        int lastCount =0;
-        int spend = 0;
+        int h = Integer.parseInt(scan.nextLine());
+        int w = Integer.parseInt(scan.nextLine());
+        int totalCake = h * w;
+        boolean cake = true;
 
-        while (enoughMoney) {
-            count++;
+        while (cake) {
 
-            int money = Integer.parseInt(scan.nextLine());
-            if (saveOrSpend.equals("save")) {
-                startingMoney += money;
-                if (startingMoney >= moneyForVacation) {
-                    System.out.printf("You save the money for %d days.", count);
-                    break;
-                }
-            } else if (saveOrSpend.equals("spend")) {
-                if (startingMoney < money) {
-                    startingMoney = 0;
-                } else {
-               startingMoney -= money;
-                }
+            String input = scan.nextLine();
+            if (input.equals("STOP")) {
+                System.out.printf("%s pieces are left.", totalCake);
+                break;
+            } else {
+                int piece = Integer.parseInt(input);
+                totalCake -= piece;
             }
-            if (saveOrSpend.equals("spend")) {
-                spend++;
-                if (spend == 5) {
-                    System.out.println("You can't save the money.");
-                    System.out.println(count);
-                    break;
-                }
-            }
-            saveOrSpend = scan.nextLine();
 
+
+
+            if (totalCake < 0) {
+                System.out.printf("No more cake left! You need %s pieces more.", Math.abs(totalCake));
+                break;
+            }
         }
+
+
+
+
 
 
     }
