@@ -120,16 +120,51 @@ public class FundamentalsBacis2 {
 
         //4.	Print and Sum
 
-        Scanner scan = new Scanner(System.in);
-        int start = Integer.parseInt(scan.nextLine());
-        int end = Integer.parseInt(scan.nextLine());
-        int sum = 0;
+//        Scanner scan = new Scanner(System.in);
+//        int start = Integer.parseInt(scan.nextLine());
+//        int end = Integer.parseInt(scan.nextLine());
+//        int sum = 0;
+//
+//        for (int i = start; i <= end; i++) {
+//            System.out.printf("%d ", i);
+//            sum += i;
+//        }
+//        System.out.printf("%nSum: %d", sum);
 
-        for (int i = start; i <= end; i++) {
-            System.out.printf("%d ", i);
-            sum += i;
-        }
-        System.out.printf("%nSum: %d", sum);
+        //5.	Login
+
+//        Scanner scan = new Scanner(System.in);
+//
+//        String username = scan.nextLine();
+//        int counter = 0;
+//        int length = username.length()-1;
+//        String pass = "";
+//        boolean correct = false;
+//
+//
+//        for (int i = username.length() - 1; i >= 0 ; i--) {
+//            pass = pass + username.charAt(i);
+//        }
+//        String input = scan.nextLine();
+//        //counter++;
+//        while (!correct) {
+//            if (pass.equals(input)) {
+//                System.out.printf("User %s logged in.", username);
+//                break;
+//            } else {
+//                System.out.println("Incorrect password. Try again.");
+//                counter++;
+//                if (counter == 4) {
+//                    System.out.printf("User %s is blocked!", username);
+//                }
+//                input = scan.nextLine();
+//            }
+//
+//        }
+
+
+
+
 
 
 
