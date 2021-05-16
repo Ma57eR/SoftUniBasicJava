@@ -12,7 +12,7 @@ public class FundamentalsArrays {
 
 //        Scanner scan = new Scanner(System.in);
 //        String[] days = {
-//                "Invalid day!",
+//
 //                "Monday",
 //                "Tuesday",
 //                "Wednesday",
@@ -22,10 +22,10 @@ public class FundamentalsArrays {
 //                "Sunday"};
 //        int n = Integer.parseInt(scan.nextLine());
 //
-//        if (n > 6 || n < 0) {
+//        if (n > 7 || n < 1) {
 //            System.out.println("Invalid day!");
 //        } else {
-//            System.out.println(days[n]);
+//            System.out.println(days[n-1]);
 //        }
 
 
@@ -125,20 +125,27 @@ public class FundamentalsArrays {
         //07. Condense Array to Number
 
         Scanner scan = new Scanner(System.in);
-        int[] numbers = Arrays.stream(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] condensed = new int[numbers.length];
-        int sum = 0;
-
-        for (int i = 0; i <= numbers.length-1; i++) {
-            if (i < numbers.length-1) {
-                condensed[i] = numbers[i] + numbers[i + 1];
-                sum += condensed[i];
-            } else {
-                break;
+        //Инициализираме масив от входа
+        int[] input = Arrays.stream(scan.nextLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        //въртим loop докато дълбжината на масива е с повече от една стойност
+        while (input.length > 1) {
+            // Инициализираме нов масив, който е с 1 по-къс от оригиналния
+            int[] condensed = new int[input.length - 1];
+            //Въртим loop, за да съберем двойките числа
+            for (int i = 0; i < condensed.length; i++) {
+                condensed[i] = input[i] + input[i + 1];
             }
+            //Присвояваме в първия масив, стойностите от втория като по-този начин намаляваме дължината му с 1
+            input = condensed;
         }
+        System.out.println(input[0]);
 
-        System.out.println(sum);
+
+        //!!!!!!!!!!!!!!!!!!! ITER - За FOREACH На масив!!!!!!!!!!!!!!!!!!
+
+
+
+
 
     }
 }
