@@ -107,20 +107,46 @@ public class FundArrEx {
         //09. Kamino Factory
         Scanner scan = new Scanner(System.in);
         int numOfSamples = Integer.parseInt(scan.nextLine());
-        int[] dna = Arrays.stream(scan.nextLine().split("|+")).mapToInt(Integer::parseInt).toArray();
-        int[] bestDNA = dna;
+        String[] dna = scan.nextLine().split("\\!+");
+        int[] dnanum = Arrays.stream(dna).mapToInt(Integer::parseInt).toArray();
+        int[] bestDNA = new int[numOfSamples];
+        int subseq = 1;
         int sum = 0;
+        int bestDNASum = 0;
+        int bestDNAIndex = 0;
+        int dnanumber =0;
+        int bestDNANum = 0;
 
         //Трябва да намерим ДНК с най-много единици
         //Ако има с еднакъв брой, гледаме кой масив е започнал с първа единица
-        for (int i = 0; i < dna.length; i++) {
+        while (!dna.equals("Clone them!")) {
+            sum = Arrays.stream(dnanum).sum();
+            for (int i = 0; i < dnanum.length; i++) {
+                if (dnanum[i] + dnanum[i + 1] == 2) {
+                    subseq++;
+                    bestDNAIndex = i;
+                }
+                }
+            }
 
-        }
 
-
-
-
-
+//            dnanumber++;
+//            if (bestDNASum < sum) {
+//                bestDNASum = sum;
+//                bestDNA = dnanum;
+//                bestDNANum = dnanumber;
+//                for (int i = 0; i < bestDNA.length; i++) {
+//                    if (bestDNA[i] == 1) {
+//                        bestDNAIndex = i;
+//                        break;
+//                    }
+//                }
+//            }
+//            dna = scan.nextLine().split("\\!+");
+//            dnanum = Arrays.stream(dna).mapToInt(Integer::parseInt).toArray();
+//        }
+//
+//        System.out.printf("Best DNA sample {bestSequenceIndex} with sum: {bestSequenceSum}", bestDNANum, );
 
     }
 }
