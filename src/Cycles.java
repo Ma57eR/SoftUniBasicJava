@@ -186,31 +186,31 @@ public class Cycles {
 
         //11th case
 
-        Scanner scan = new Scanner(System.in);
-        int n = Integer.parseInt(scan.nextLine());
-        double dishWasher = Double.parseDouble(scan.nextLine());
-        double giftPrice = Double.parseDouble(scan.nextLine());
-        int money =0;
-        int gifts = 0;
-        int count = 0;
-        double allMoney =0;
-
-        for (int i = 1; i <= n; i++) {
-            if (i % 2 == 0) {
-                count += 1;
-                money += count * 10; //Всеки следващ
-                money -= 1; // Крадливия брат
-            } else {
-                gifts += 1;
-            }
-        }
-        allMoney = money + (gifts * giftPrice);
-
-        if (allMoney >= dishWasher) {
-            System.out.printf("Yes! %.2f", allMoney - dishWasher);
-        } else {
-            System.out.printf("No! %.2f", dishWasher - allMoney);
-        }
+//        Scanner scan = new Scanner(System.in);
+//        int n = Integer.parseInt(scan.nextLine());
+//        double dishWasher = Double.parseDouble(scan.nextLine());
+//        double giftPrice = Double.parseDouble(scan.nextLine());
+//        int money =0;
+//        int gifts = 0;
+//        int count = 0;
+//        double allMoney =0;
+//
+//        for (int i = 1; i <= n; i++) {
+//            if (i % 2 == 0) {
+//                count += 1;
+//                money += count * 10; //Всеки следващ
+//                money -= 1; // Крадливия брат
+//            } else {
+//                gifts += 1;
+//            }
+//        }
+//        allMoney = money + (gifts * giftPrice);
+//
+//        if (allMoney >= dishWasher) {
+//            System.out.printf("Yes! %.2f", allMoney - dishWasher);
+//        } else {
+//            System.out.printf("No! %.2f", dishWasher - allMoney);
+//        }
 
 
     }

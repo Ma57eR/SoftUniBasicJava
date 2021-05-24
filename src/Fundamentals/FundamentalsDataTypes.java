@@ -217,7 +217,7 @@ public class FundamentalsDataTypes {
          int   snowballQuality = Integer.parseInt(scan.nextLine());
             if (snowballTime != 0 && snowballSnow != 0) {
                 double newSnowball = (double) Math.pow(snowballSnow / snowballTime, snowballQuality);
-                if (bestSnowBall < newSnowball) {
+                if (bestSnowBall <= newSnowball) {
                     bestQuality = snowballQuality;
                     bestSnow = snowballSnow;
                     bestTime = snowballTime;

@@ -5,6 +5,45 @@ public class NestedCycles {
     public static void main(String[] args) {
 
 
+        Scanner scan = new Scanner(System.in);
+
+        int numA = Integer.parseInt(scan.nextLine());
+        int numB = Integer.parseInt(scan.nextLine());
+        int magicNum = Integer.parseInt(scan.nextLine());
+        int counter = 0;
+        boolean flag = false;
+
+        for (int i = numA; i <= numB; i++) {
+            for (int j = numA; j <= numB; j++) {
+                counter++;
+                int sbor = i + j;
+
+
+                if (sbor == magicNum) {
+                    System.out.printf("Combination N:%d ", counter);
+                    System.out.printf("(%d + %d = %d)", i, j, sbor);
+                    flag = true;
+                    break;
+                }
+                if (flag) {
+                    break;
+                }
+
+
+            }
+
+
+        }
+
+        System.out.printf("%d combinations - neither equals %d", counter, magicNum);
+
+
+
+    }
+}
+
+
+
         //03. Combinations
 
 //        Scanner scan = new Scanner(System.in);
@@ -166,5 +205,3 @@ public class NestedCycles {
 //        System.out.printf("%.2f%% kids tickets.", kid / totalTickets * 100);
 
 
-    }
-}
