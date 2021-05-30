@@ -169,25 +169,25 @@ public class FundamentalsDataTypesMore {
 
         //06. Balanced Brackets
 
-        Scanner scan = new Scanner(System.in);
-        int numLines = Integer.parseInt(scan.nextLine());
-        int openBrackets = 0;
-        int closingBrackets = 0;
-
-        for (int i = 0; i < numLines; i++) {
-            String input = scan.nextLine();
-            if (input.equals("(")) {
-                openBrackets++;
-            }
-            if (input.equals(")")) {
-                closingBrackets++;
-            }
-        }
-        if (openBrackets - closingBrackets != 0) {
-            System.out.println("UNBALANCED");
-        } else {
-            System.out.println("BALANCED");
-        }
+//        Scanner scan = new Scanner(System.in);
+//        int numLines = Integer.parseInt(scan.nextLine());
+//        int openBrackets = 0;
+//        int closingBrackets = 0;
+//
+//        for (int i = 0; i < numLines; i++) {
+//            String input = scan.nextLine();
+//            if (input.equals("(")) {
+//                openBrackets++;
+//            }
+//            if (input.equals(")")) {
+//                closingBrackets++;
+//            }
+//        }
+//        if (openBrackets - closingBrackets != 0) {
+//            System.out.println("UNBALANCED");
+//        } else {
+//            System.out.println("BALANCED");
+//        }
 
 
 

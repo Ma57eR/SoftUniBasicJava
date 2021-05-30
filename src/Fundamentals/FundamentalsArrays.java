@@ -138,6 +138,7 @@ public class FundamentalsArrays {
             //Присвояваме в първия масив, стойностите от втория като по-този начин намаляваме дължината му с 1
             input = condensed;
         }
+
         System.out.println(input[0]);
 
 

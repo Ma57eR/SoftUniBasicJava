@@ -206,7 +206,7 @@ public class FundamentalsDataTypes {
 
         Scanner scan = new Scanner(System.in);
         int numOfBalls = Integer.parseInt(scan.nextLine());
-        int bestSnowBall = 0;
+        double bestSnowBall = 0;
         int bestSnow = 0;
         int bestTime = 0;
         int bestQuality = 0;
@@ -215,20 +215,20 @@ public class FundamentalsDataTypes {
          int   snowballSnow = Integer.parseInt(scan.nextLine());
          int   snowballTime = Integer.parseInt(scan.nextLine());
          int   snowballQuality = Integer.parseInt(scan.nextLine());
-            if (snowballTime != 0 && snowballSnow != 0) {
-                double newSnowball = (double) Math.pow(snowballSnow / snowballTime, snowballQuality);
-                if (bestSnowBall <= newSnowball) {
+            //if (snowballTime != 0 && snowballSnow != 0) {
+                double newSnowball = Math.pow(snowballSnow / snowballTime, snowballQuality);
+                if (newSnowball > bestSnowBall ) {
                     bestQuality = snowballQuality;
                     bestSnow = snowballSnow;
                     bestTime = snowballTime;
-                    bestSnowBall = (int)newSnowball;
-                }
+                    bestSnowBall = newSnowball;
+               // }
             }
 
 
         }
 
-        System.out.printf("%d : %d = %d (%d)",bestSnow, bestTime, bestSnowBall, bestQuality);
+        System.out.printf("%d : %d = %.0f (%d)",bestSnow, bestTime, bestSnowBall, bestQuality);
 
 
     }
