@@ -105,29 +105,29 @@ public class FundArrEx {
 //        }
 
         //09. Kamino Factory
-        Scanner scan = new Scanner(System.in);
-        int numOfSamples = Integer.parseInt(scan.nextLine());
-        String[] dna = scan.nextLine().split("\\!+");
-        int[] dnanum = Arrays.stream(dna).mapToInt(Integer::parseInt).toArray();
-        int[] bestDNA = new int[numOfSamples];
-        int subseq = 1;
-        int sum = 0;
-        int bestDNASum = 0;
-        int bestDNAIndex = 0;
-        int dnanumber =0;
-        int bestDNANum = 0;
-
-        //Трябва да намерим ДНК с най-много единици
-        //Ако има с еднакъв брой, гледаме кой масив е започнал с първа единица
-        while (!dna.equals("Clone them!")) {
-            sum = Arrays.stream(dnanum).sum();
-            for (int i = 0; i < dnanum.length; i++) {
-                if (dnanum[i] + dnanum[i + 1] == 2) {
-                    subseq++;
-                    bestDNAIndex = i;
-                }
-                }
-            }
+//        Scanner scan = new Scanner(System.in);
+//        int numOfSamples = Integer.parseInt(scan.nextLine());
+//        String[] dna = scan.nextLine().split("\\!+");
+//        int[] dnanum = Arrays.stream(dna).mapToInt(Integer::parseInt).toArray();
+//        int[] bestDNA = new int[numOfSamples];
+//        int subseq = 1;
+//        int sum = 0;
+//        int bestDNASum = 0;
+//        int bestDNAIndex = 0;
+//        int dnanumber =0;
+//        int bestDNANum = 0;
+//
+//        //Трябва да намерим ДНК с най-много единици
+//        //Ако има с еднакъв брой, гледаме кой масив е започнал с първа единица
+//        while (!dna.equals("Clone them!")) {
+//            sum = Arrays.stream(dnanum).sum();
+//            for (int i = 0; i < dnanum.length; i++) {
+//                if (dnanum[i] + dnanum[i + 1] == 2) {
+//                    subseq++;
+//                    bestDNAIndex = i;
+//                }
+//                }
+//            }
 
 
 //            dnanumber++;

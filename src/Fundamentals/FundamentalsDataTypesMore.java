@@ -95,6 +95,7 @@ public class FundamentalsDataTypesMore {
 //            right = Long.parseLong(temp);
 //
 //            if (left >= right) {
+//                left = Math.abs(left);
 //                while (left > 0) {
 //                    long templeft = left % 10; //Взимаме последната цифра
 //                    sum += Math.abs(templeft);
@@ -103,6 +104,7 @@ public class FundamentalsDataTypesMore {
 //                System.out.println(sum);
 //                sum = 0;
 //            } else {
+//                right = Math.abs(right);
 //                while (right > 0) {
 //                    long tempright = right % 10; //Взимаме последната цифра
 //                    sum += Math.abs(tempright);
@@ -169,25 +171,35 @@ public class FundamentalsDataTypesMore {
 
         //06. Balanced Brackets
 
-        Scanner scan = new Scanner(System.in);
-        int numLines = Integer.parseInt(scan.nextLine());
-        int openBrackets = 0;
-        int closingBrackets = 0;
-
-        for (int i = 0; i < numLines; i++) {
-            String input = scan.nextLine();
-            if (input.equals("(")) {
-                openBrackets++;
-            }
-            if (input.equals(")")) {
-                closingBrackets++;
-            }
-        }
-        if (openBrackets - closingBrackets != 0) {
-            System.out.println("UNBALANCED");
-        } else {
-            System.out.println("BALANCED");
-        }
+//        Scanner scan = new Scanner(System.in);
+//        int numLines = Integer.parseInt(scan.nextLine());
+//        int openBrackets = 0;
+//        int closingBrackets = 0;
+//        int consecutive = 0;
+//
+//        for (int i = 0; i < numLines; i++) {
+//            String input = scan.nextLine();
+//            if (input.equals("(")) {
+//                openBrackets++;
+//                consecutive++;
+//                if (consecutive > 1) {
+//                    break;
+//                }
+//
+//            }
+//            if (input.equals(")")) {
+//                closingBrackets++;
+//                if (consecutive == 0) {
+//                    break;
+//                }
+//                consecutive--;
+//            }
+//        }
+//        if (openBrackets - closingBrackets != 0 || consecutive > 1) {
+//            System.out.println("UNBALANCED");
+//        } else {
+//            System.out.println("BALANCED");
+//        }
 
 
 
