@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 public class ListManipulationAdvanced05 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        List<Integer> numbers = Arrays.stream(scan.nextLine().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
+        List<Integer> numbers = Arrays.stream(scan.nextLine().split("\\s+")).map(Integer::parseInt).collect(Collectors.toList());
+
         String[] commandType = scan.nextLine().split(" ");
         String command = commandType[0];
         int commandNumber = Integer.parseInt(commandType[1]);
@@ -26,7 +27,7 @@ public class ListManipulationAdvanced05 {
                     break;
                 case "Print":
                     if (commandType[1].equals("even")) {
-                       String evenNum = evenNumbers(numbers);
+                        String evenNum = evenNumbers(numbers);
                         System.out.println(evenNum);
                     } else {
                         String oddNum = oddNumbers(numbers);
@@ -41,7 +42,7 @@ public class ListManipulationAdvanced05 {
                     String filtered = filtering(numbers, commandType[1], Integer.parseInt(commandType[2]));
                     System.out.println(filtered);
             }
-            commandType = scan.nextLine().split(" ");
+            commandType = scan.nextLine().split("\\s+");
             command = commandType[0];
         }
 
@@ -59,7 +60,7 @@ public class ListManipulationAdvanced05 {
     }
 
     private static String evenNumbers(List<Integer> numbers) {
-        //List<Integer> evens = new ArrayList<>();
+
         String output = "";
         for (Integer even : numbers) {
             if (even % 2 == 0) {
@@ -70,7 +71,7 @@ public class ListManipulationAdvanced05 {
     }
 
     private static String oddNumbers(List<Integer> numbers) {
-        //List<Integer> evens = new ArrayList<>();
+
         String output = "";
         for (Integer odd : numbers) {
             if (odd % 2 != 0) {

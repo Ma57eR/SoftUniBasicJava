@@ -42,23 +42,23 @@ public class FundArrEx {
 
 
         //04 Задача второ решение
-//        Scanner scan = new Scanner(System.in);
-//        int[] numbers = Arrays.stream(scan.nextLine().split(" "))
-//                .mapToInt(Integer::parseInt).toArray();
-//        int rotations = Integer.parseInt(scan.nextLine());
-//
-//        for (int i = 1; i <= rotations; i++) {
-//            int firstNum = numbers[0];
-//            for (int j = 0; j < numbers.length-1; j++) {
-//                numbers[j] = numbers[j + 1];
-//            }
-//            numbers[numbers.length - 1] = firstNum;
-//
-//        }
-//
-//        for (int number : numbers) {
-//            System.out.print(number + " ");
-//        }
+        Scanner scan = new Scanner(System.in);
+        int[] numbers = Arrays.stream(scan.nextLine().split(" "))
+                .mapToInt(Integer::parseInt).toArray();
+        int rotations = Integer.parseInt(scan.nextLine());
+
+        for (int i = 1; i <= rotations; i++) {
+            int firstNum = numbers[0];
+            for (int j = 0; j < numbers.length-1; j++) {
+                numbers[j] = numbers[j + 1];
+            }
+            numbers[numbers.length - 1] = firstNum;
+
+        }
+
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
 
         //07. Max Sequence of Equal Elements
 
