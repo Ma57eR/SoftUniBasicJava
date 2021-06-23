@@ -13,7 +13,7 @@ public class ListManipulationAdvanced05 {
 
         String[] commandType = scan.nextLine().split(" ");
         String command = commandType[0];
-        int commandNumber = Integer.parseInt(commandType[1]);
+        //int commandNumber = Integer.parseInt(commandType[1]);
 
 
         while (!command.equals("end")) {

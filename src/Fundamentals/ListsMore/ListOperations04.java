@@ -19,14 +19,14 @@ public class ListOperations04 {
                     commandAdd(commandType.get(1),numbers);
                     break;
                 case "Insert":
-                    if (Integer.parseInt(commandType.get(2)) > numbers.size()) {
+                    if (Integer.parseInt(commandType.get(2)) > numbers.size() || Integer.parseInt(commandType.get(2)) < 0) {
                         System.out.println("Invalid index");
                     } else {
                         commandInsert(numbers, commandType.get(1), commandType.get(2));
                     }
                     break;
                 case "Remove":
-                    if (Integer.parseInt(commandType.get(1)) > numbers.size()) {
+                    if (Integer.parseInt(commandType.get(1)) > numbers.size() || Integer.parseInt(commandType.get(1)) < 0) {
                         System.out.println("Invalid index");
                     } else {
                         removeIndex(numbers, commandType.get(1));
