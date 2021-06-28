@@ -1,6 +1,5 @@
 package Fundamentals.ListsMore;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -9,66 +8,67 @@ import java.util.stream.Collectors;
 public class Test {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String namesInput = scanner.nextLine(); //"Ivo Johny Tony Bony Mony"
+        List<String> names = Arrays.stream(namesInput.split("\\s+")).collect(Collectors.toList());
 
-        List<Integer> numbers = Arrays.stream(scanner.nextLine().split("\\s+")).map(e -> Integer.parseInt(e)).collect(Collectors.toList());
-        List<Integer> temp = new ArrayList<>();
+        String command = scanner.nextLine();
+        //•   "merge {startIndex} {endIndex}" -> split("\\s+") -> ["merge", "{startIndex}", "endIndex"]
+        //•   "divide {index} {partitions}" ->split("\\s+") -> ["divide", "{index}", "partitions"]
+        while(!command.equals("3:1")) {
+            String [] commandData = command.split("\\s+");
+            String commandName = commandData[0]; //merge or divide
+            if(commandName.equals("merge")) {
+                int startIndex = Integer.parseInt(commandData[1]);
+                int endIndex = Integer.parseInt(commandData[2]);
+                if(startIndex < 0) {
+                    startIndex = 0;
+                }
+                if(endIndex > names.size() - 1) {
+                    endIndex = names.size() - 1;
+                }
+                //проверка за индексите
+                boolean isStartIndexValid = isValidIndex(startIndex, names.size());
+                boolean isEndIndexValid = isValidIndex(endIndex, names.size());
 
-        int sum = 0;
-        while (numbers.size() > 0) {
-            int index = Integer.parseInt(scanner.nextLine());
-
-            if (index == 0 && numbers.size() == 1) {
-                sum += numbers.get(0);
-                numbers.remove(0);
-                break;
-            }
-            if (index < 0) {
-                int keyNumIndex = numbers.get(0);
-                sum += keyNumIndex;
-
-                numbers.remove(0);
-                numbers.add(0, numbers.get(numbers.size() - 1));
-
-                for (int j = 0; j < numbers.size(); j++) {
-                    if (keyNumIndex >= numbers.get(j)) {
-                        numbers.set(j, numbers.get(j) + keyNumIndex);
-                    } else {
-                        numbers.set(j, numbers.get(j) - keyNumIndex);
+                //ако са валидни и двата
+                if(isStartIndexValid && isEndIndexValid) {
+                    //{abc, def, ghi} -> merge 0 1 -> {abcdef, ghi}
+                    StringBuilder resultMerge = new StringBuilder();
+                    for (int index = startIndex; index <= endIndex; index++) {
+                        resultMerge.append(names.get(index));
                     }
+                    for (int index = startIndex; index <= endIndex; index++) {
+                        names.remove(startIndex);
+                    }
+                    names.add(startIndex, resultMerge.toString());
+                }
+            } else if (commandName.equals("divide")) {
+                int index = Integer.parseInt(commandData[1]);
+                int partitions = Integer.parseInt(commandData[2]);
+                String elementForDivide = names.get(index);
+                //{abcdef, ghi, jkl} -> {ghi, jkl}
+                names.remove(index);
+                //"abcdef" -> 6 / 3 = 2
+                int partSize = elementForDivide.length() / partitions;
+                int begin = 0;
+
+                for (int part = 1; part < partitions; part++) {
+                    names.add(index, elementForDivide.substring(begin, begin + partSize));
+                    index++;
+                    begin += partSize;
                 }
 
-            }
-            if (index >= numbers.size()) {
-                int keyNumIndex = numbers.get(numbers.size() - 1);
-                sum += keyNumIndex;
-
-                numbers.remove(numbers.size() - 1);
-                numbers.add(numbers.get(0));
-
-                for (int j = 0; j < numbers.size(); j++) {
-                    if (keyNumIndex >= numbers.get(j)) {
-                        numbers.set(j, numbers.get(j) + keyNumIndex);
-                    } else {
-                        numbers.set(j, numbers.get(j) - keyNumIndex);
-                    }
-                }
+                names.add(index, elementForDivide.substring(begin));
 
             }
-            if (index >= 0 && index < numbers.size()) {
-                int keyNumIndex = numbers.get(index);
-                sum += keyNumIndex;
-
-                for (int j = 0; j < numbers.size(); j++) {
-                    if (keyNumIndex >= numbers.get(j)) {
-                        numbers.set(j, numbers.get(j) + keyNumIndex);
-                    } else if (keyNumIndex < numbers.get(j)) {
-                        numbers.set(j, numbers.get(j) - keyNumIndex);
-                    }
-                }
-                numbers.remove(index);
-            }
+            command = scanner.nextLine();
         }
-        System.out.println(sum);
 
+        System.out.println(String.join(" ", names));
+
+    }
+
+    public static boolean isValidIndex(int index, int size) {
+        return index >= 0 && index <= size - 1;
     }
 }
