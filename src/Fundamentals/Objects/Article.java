@@ -11,14 +11,31 @@ public class Article {
 
 
 
-    //Методи ->  какво може да прави всяка една кола
+//Методи ->  какво може да прави всяка една кола
 
+    public void edit (String newContent) {
+        this.content = newContent;
+    }
+
+    public void changeAuthor (String newAuthor) {
+        this.author = newAuthor;
+    }
+
+    public void newTitle (String titleNew) {
+        this.title = titleNew;
+    }
 
     //Конструктор
     public Article(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
-
     }
+
+    @Override
+    public String toString() {
+        //Да опиша как изглежда моя обект като Стринг
+        return this.title + " - " + this.content + ": " + this.author;
+    }
+
 }
