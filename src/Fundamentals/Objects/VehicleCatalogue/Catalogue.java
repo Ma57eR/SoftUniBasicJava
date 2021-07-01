@@ -1,41 +1,33 @@
 package Fundamentals.Objects.VehicleCatalogue;
 
-public class Catalogue {
-    private String typeOfVehicle;
-    private String modelOfVehicle;
-    private String color;
-    private Double horsePower;
+    public class Catalogue {
+        private String type;
+        private String model;
+        private String color;
+        private Double horsepower;
 
-    public Catalogue(String typeOfVehicle, String modelOfVehicle, String color, double horsePower) {
-        this.typeOfVehicle = typeOfVehicle;
-        this.modelOfVehicle = modelOfVehicle;
-        this.color = color;
-        this.horsePower = horsePower;
-    }
+        public Catalogue(String type, String model, String color, Double horsepower){
+            this.type=type;
+            this.model=model;
+            this.color=color;
+            this.horsepower=horsepower;
+        }
+        public String getType(){
+            return this.type;
+        }
+        public String getModel(){
+            return  this.model;
+        }
+        public String getColor(){
+            return this.color;
+        }
+        public Double getHorsepower(){
+            return this.horsepower;
+        }
 
-    public String getModelOfVehicle() {
-        return modelOfVehicle;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public Double getHorsePower() {
-        return horsePower;
-    }
-
-    public String getTypeOfVehicle() {
-        return typeOfVehicle;
-    }
-
-    @Override
-    public String toString() {
-        return "Catalogue{" +
-                "typeOfVehicle='" + typeOfVehicle + '\'' +
-                ", modelOfVehicle='" + modelOfVehicle + '\'' +
-                ", color='" + color + '\'' +
-                ", horsePower=" + horsePower +
-                '}';
+        @Override
+        public String toString() {
+            return String.format("Type: %s%nModel: %s%nColor: %s%nHorsepower: %.0f%n",(this.type.substring(0,1).toUpperCase()+this.type.substring(1)),
+                    this.model,this.color,this.horsepower);
     }
 }
