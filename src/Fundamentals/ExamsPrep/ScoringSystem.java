@@ -20,6 +20,7 @@ public class ScoringSystem {
         for (int i = 0; i < numOfStudents; i++) {
             int attendance = Integer.parseInt(scan.nextLine());
             totalBonus = (double) attendance / lectures * (5 + (double) additionalBonus);
+            totalBonus = Math.abs(totalBonus);
             bonuses.add(totalBonus);
             studentLectures.add(attendance);
         }
