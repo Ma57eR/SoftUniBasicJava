@@ -25,7 +25,7 @@ public class ScoringSystem {
             studentLectures.add(attendance);
         }
         double maxBonus = Collections.max(bonuses);
-        int studentAttendance = 0;
+        int studentAttendance;
         //maxBonus = bonuses.get(bonuses.size());
         studentAttendance = studentLectures.get(bonuses.indexOf(maxBonus));
         System.out.printf("Max Bonus: %d.%n", Math.round(maxBonus));
