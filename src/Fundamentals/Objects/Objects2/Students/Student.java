@@ -1,27 +1,24 @@
 package Fundamentals.Objects.Objects2.Students;
 
-public class Student {
+import java.text.DecimalFormat;
 
+public class Student {
     private String firstName;
     private String lastName;
-    private int age;
-    private String homeTown;
+    private Double grade;
 
-    public Student(String firstName, String lastName, int age, String homeTown) {
+    public Student(String firstName, String lastName, Double grade) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
-        this.homeTown = homeTown;
+        this.grade = grade;
     }
 
-
-    public String getHomeTown() {
-        return homeTown;
+    public Double getGrade() {
+        return grade;
     }
-
 
     @Override
     public String toString() {
-        return this.firstName + " " + this.lastName + " is " + this.age + " years old";
+        return this.firstName + " " + this.lastName + ": " + new DecimalFormat("0.00").format(this.grade);
     }
 }

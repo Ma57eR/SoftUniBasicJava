@@ -1,7 +1,6 @@
-package Fundamentals.Objects.Articles2;
+package Fundamentals.Objects.Articles;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
 

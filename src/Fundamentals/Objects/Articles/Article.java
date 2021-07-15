@@ -1,4 +1,4 @@
-package Fundamentals.Objects.Articles2;
+package Fundamentals.Objects.Articles;
 
 public class Article {
 

@@ -1,4 +1,4 @@
-package Fundamentals.Objects.Object2.Students2;
+package Fundamentals.Objects.Students2;
 
 public class Student {
     private String firstName;
