@@ -1,9 +1,6 @@
 package Fundamentals.AssociativeArrays;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class OddOccurrences {
     public static void main(String[] args) {
@@ -29,10 +26,14 @@ public class OddOccurrences {
                 forPrint.put(input[i],occur);
             }
         }
-        for (int i = 0; i < forPrint.size(); i++) {
-            System.out.printf("%s", forPrint.get(i));
+        List<String> printing = new ArrayList<>();
+        for (String key : forPrint.keySet()) {
+            printing.add(key);
+        }
+        for (int i = 0; i < printing.size(); i++) {
+            System.out.printf("%s", printing.get(i));
             if (i < forPrint.size() - 1) {
-                System.out.println(", ");
+                System.out.print(", ");
             }
 
         }
