@@ -30,22 +30,29 @@ public class Main {
 
             Engine currentEngine = new Engine(engineSpeed, enginePower);
             Cargo currentCargo = new Cargo(cargoWeight, cargoType);
-            Tires currentTires = new Tires(t1Pressure, t1Age, t2Pressure,t2Age, t3Pressure, t3Age, t4Pressure, t4Age);
+            Tires currentTires = new Tires(t1Pressure, t1Age, t2Pressure, t2Age, t3Pressure, t3Age, t4Pressure, t4Age);
             Car currentCar = new Car(model, currentEngine, currentCargo, currentTires);
             cars.add(currentCar);
         }
         String command = scan.nextLine();
 
-                for (Car car : cars) {
+        for (Car car : cars) {
+            switch (command) {
+                case "fragile":
                     if (car.getCargo().getCargoType().equals(command)) {
                         if (car.getTires().getTirePressure1() < 1 || car.getTires().getTirePressure2() < 1 || car.getTires().getTirePressure3() < 1 || car.getTires().getTirePressure4() < 1) {
                             System.out.println(car.printFragile());
                         }
                     }
+                    break;
+                case "flamable":
+
                     if (car.getCargo().getCargoType().equals(command) && car.getEngine().getEnginePower() > 250) {
                         System.out.println(car.printFlamable());
                     }
-                }
+
+            }
+        }
 
 
     }
