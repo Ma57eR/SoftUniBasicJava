@@ -6,7 +6,6 @@ public class CompanyUsers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Map<String, List<String>> companyInfo = new TreeMap<>();
-        List<String> companies = new ArrayList<>();
         String[] input = scan.nextLine().split(" -> ");
 
         while (!input[0].equals("End")) {
@@ -17,13 +16,14 @@ public class CompanyUsers {
                 companyInfo.put(company, new ArrayList<>());
                 companyInfo.get(company).add(employee);
             }
+            //Ако юзъра съществува, но компанията не
             if (!companyInfo.get(company).contains(employee)) {
                 companyInfo.get(company).add(employee);
             }
 
             input = scan.nextLine().split(" -> ");
         }
-        companies.sort(Comparator.comparing(String::valueOf));
+
         for (Map.Entry<String, List<String>> company : companyInfo.entrySet()) {
             System.out.println(company.getKey());
             for (int i = 0; i < company.getValue().size(); i++) {

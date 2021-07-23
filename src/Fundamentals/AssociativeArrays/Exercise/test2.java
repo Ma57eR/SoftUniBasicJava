@@ -6,25 +6,11 @@ import java.util.TreeMap;
 
 public class test2 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        String a = "Pesho";
+        String b = "Pesho";
 
-        TreeMap<Integer, String> geeks
-                = new TreeMap<Integer, String>();
-
-        // putting values in navigable set
-        geeks.put(1, "Guru");
-        geeks.put(2, "Ayush");
-        geeks.put(3, "Devesh");
-        geeks.put(4, "Kashish");
-
-        System.out.println("TreeMap values :- " + geeks);
-
-        // use of descendingKeySet
-        NavigableSet nevigableSet
-                = geeks.descendingKeySet();
-
-        System.out.println("Reverse key values:- "
-                + nevigableSet);
-
+        System.out.println(b);
+        b = "Pesho1";
+        System.out.println(a);
     }
 }
