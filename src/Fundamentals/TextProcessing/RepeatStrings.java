@@ -1,4 +1,4 @@
-package Fundamentals.AssociativeArrays.TextProcessing;
+package Fundamentals.TextProcessing;
 
 import java.util.Scanner;
 
