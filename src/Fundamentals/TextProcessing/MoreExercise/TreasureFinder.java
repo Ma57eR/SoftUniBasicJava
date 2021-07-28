@@ -30,11 +30,11 @@ public class TreasureFinder {
             int nameEndIndex = decrypted.lastIndexOf("&");
             String treasureName = decrypted.substring(nameStartIndex, nameEndIndex);
 
-            int coordsStartIndex = decrypted.indexOf("&")+1;
-            int coordsEndIndex = decrypted.charAt(decrypted.length()-1);
+            int coordsStartIndex = decrypted.indexOf("<")+1;
+            int coordsEndIndex = decrypted.indexOf(">");
             String treasureCoords = decrypted.substring(coordsStartIndex, coordsEndIndex);
 
-            System.out.printf("Found %s at %s", treasureName, treasureCoords);
+            System.out.printf("Found %s at %s%n", treasureName, treasureCoords);
             input = scan.nextLine();
         }
 
