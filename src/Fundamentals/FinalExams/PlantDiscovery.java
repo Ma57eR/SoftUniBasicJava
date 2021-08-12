@@ -67,7 +67,7 @@ public class PlantDiscovery {
         String command = scan.nextLine();
 
         while (!command.equals("Exhibition")) {
-            String[] commandParts = command.split(": | – ");
+            String[] commandParts = command.split(": | - ");
             String commandName = commandParts[0];
             String plantName = commandParts[1];
 
@@ -97,7 +97,20 @@ public class PlantDiscovery {
             command = scan.nextLine();
         }
 
+        System.out.println("Plants for the exhibition:");
 
+        currentPlants.entrySet().stream()
+                .sorted((p1, p2) -> {
+                    //Integer.compare - p2, p1 - descending
+                    //Double.compare
+                    //Сортираме редкостта низходящо
+                    int result = Integer.compare(p2.getValue().getRarity(), p1.getValue().getRarity());
+                    if (result == 0) {
+                        //Ако две рядкости са равни, сортираме по усреднен рейтинг
+                        result = Double.compare(p2.getValue().getAverage(), p1.getValue().getAverage());
+                    }
+                    return result;
+                }).forEach(p -> System.out.printf("- %s; Rarity: %d; Rating: %.2f%n", p.getKey(), p.getValue().getRarity(), p.getValue().getAverage()));
     }
 }
 
@@ -119,7 +132,23 @@ class Plant {
         this.ratings.clear();
     }
 
+    public double getAverage() {
+        double sumOfAllRatings = 0;
+        for (double rating : this.ratings) {
+            sumOfAllRatings+= rating;
+        }
+        if (sumOfAllRatings == 0) {
+            return 0;
+        } else {
+           return sumOfAllRatings / this.ratings.size();
+        }
+    }
+
     public void setRarity(int rarity) {
         this.rarity = rarity;
+    }
+
+    public int getRarity() {
+        return rarity;
     }
 }
