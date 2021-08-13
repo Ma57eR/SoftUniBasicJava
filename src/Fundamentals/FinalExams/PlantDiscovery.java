@@ -103,7 +103,7 @@ public class PlantDiscovery {
                 .sorted((p1, p2) -> {
                     //Integer.compare - p2, p1 - descending
                     //Double.compare
-                    //Сортираме редкостта низходящо
+                    //Сортираме рядкостта низходящо
                     int result = Integer.compare(p2.getValue().getRarity(), p1.getValue().getRarity());
                     if (result == 0) {
                         //Ако две рядкости са равни, сортираме по усреднен рейтинг
