@@ -9,6 +9,9 @@ public class Tests2 {
         //Map<Map<String, Integer>, Map<String, Integer>> mapOfMaps = new LinkedHashMap<>();
         Map<String, List<String>> secondMap = new LinkedHashMap<>();
 
+        int a = Math.abs(1 - 11);
+        int b = 5 % 10;
+
         String name = "Ivan";
         secondMap.put(name, new ArrayList<>());
         secondMap.get(name).add("13");

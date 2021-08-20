@@ -4,22 +4,18 @@ public class alarmClock {
     public static void main(String[] args) {
 
     }
-    public String alarmClock(int day, boolean vacation) {
-        String alarm = "";
-        if (!vacation) {
-            if (day > 0 && day < 6) {
-                alarm = "7:00";
-            } else {
-                alarm = "10:00";
-            }
-        } else {
-            if (day > 0 && day < 6) {
-                alarm = "10:00";
-            } else {
-                alarm = "off";
-            }
+
+    public int maxMod5(int a, int b) {
+        int sum = a + b;
+        String sA = String.valueOf(a);
+        String sB = String.valueOf(b);
+        String sSum = String.valueOf(sum);
+        if(sA.length() == sSum.length()){
+            return sum;
         }
-        return alarm;
+        return a;
     }
+
+
 
 }
