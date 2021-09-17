@@ -13,13 +13,25 @@ public class BrowserHistory {
 
         Scanner scan = new Scanner(System.in);
 
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        ArrayDeque<String> stack = new ArrayDeque<>();
+        String input = scan.nextLine();
+        while (!input.equals("Home")) {
 
-        stack.push(13);
-        stack.push(73);
+            if (input.equals("back")) {
+                if (stack.size() <= 1) {
+                    System.out.println("no previous URLs");
+                    //stack.pop();
+                } else {
+                    stack.pop();
+                    System.out.println(stack.peek());
+                }
 
-        System.out.println(stack.peek());
+            } else {
+                stack.push(input);
+                System.out.println(stack.peek());
+            }
 
-
+            input = scan.nextLine();
+        }
     }
 }
