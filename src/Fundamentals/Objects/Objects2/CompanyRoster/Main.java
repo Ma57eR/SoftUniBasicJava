@@ -41,8 +41,8 @@ public class Main {
             boolean departExist = false;
             //Проверка дали информацията за отдела същестува и добавяме броя служители в него, както и общата им заплата
             for (Department department1 : depart) {
-                if (currentDepartment.department.equals(department1.getDepartment())) {
-                    department1.setSalary(department1.salary + salary);
+                if (currentDepartment.getDepartment().equals(department1.getDepartment())) {
+                    department1.setSalary(department1.getAverageSalary() + salary);
                     department1.setNumOfEmployees(department1.getNumOfEmployees() + 1);
                     departExist = true;
                 }
