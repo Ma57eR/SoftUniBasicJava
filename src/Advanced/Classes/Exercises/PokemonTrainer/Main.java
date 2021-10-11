@@ -1,6 +1,7 @@
 package Advanced.Classes.Exercises.PokemonTrainer;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,9 +51,17 @@ public class Main {
             }
             element = scan.nextLine();
         }
-        for (Map.Entry<String, Trainer> trainerEntry : trainers.entrySet()) {
-            System.out.println(trainerEntry.getKey() + " " + trainerEntry.getValue().getNumOfBadges() + " " + trainerEntry.getValue().pokeSize());
-        }
+
+        trainers.entrySet()
+                .stream()
+                .sorted((b1, b2) -> Integer.compare(b2.getValue().getNumOfBadges(), b1.getValue().getNumOfBadges()))
+                .forEach(t -> {
+                    System.out.println(t.getKey() + " " + t.getValue().getNumOfBadges() + " " + t.getValue().pokeSize());
+                });
+
+//        for (Map.Entry<String, Trainer> trainerEntry : trainers.entrySet()) {
+//            System.out.println(trainerEntry.getKey() + " " + trainerEntry.getValue().getNumOfBadges() + " " + trainerEntry.getValue().pokeSize());
+//        }
     }
 }
 

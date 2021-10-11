@@ -36,7 +36,7 @@ public class Trainer {
     }
 
     public void removeDeadPokemons() {
-        pokemons.stream()
+        this.pokemons = this.pokemons.stream()
                 .filter(pokemon -> pokemon.getHealth() > 0)
                 .collect(Collectors.toList());
     }
