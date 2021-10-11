@@ -15,6 +15,14 @@ public class Pokemon {
         this.health = health;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
     public String getElement() {
         return element;
     }

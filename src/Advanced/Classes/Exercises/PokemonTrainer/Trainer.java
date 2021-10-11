@@ -3,27 +3,42 @@ package Advanced.Classes.Exercises.PokemonTrainer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Trainer {
     private int numOfBadges;
-    private List<Pokemon> pokemonList;
+    private List<Pokemon> pokemons;
 
-    public Trainer(int numOfBadges, List<Pokemon> pokemonList) {
-        this.numOfBadges = numOfBadges;
-        this.pokemonList = new ArrayList<>();
-    }
-
+    //Новия обект треньор е без задължителни полета
+    //Като създава баджове 0 и празен лист с покемони
     public Trainer() {
+        this.numOfBadges = 0;
+        this.pokemons = new ArrayList<>();
     }
 
-    public void addPokemon(Pokemon pokemon) {
-        this.pokemonList.add(pokemon);
+    public void addPokemon (Pokemon currentPokemon) {
+        this.pokemons.add(currentPokemon);
     }
 
-    public void setNumOfBadges() {
+    public void increaseBadges() {
         this.numOfBadges++;
     }
+
     public List<Pokemon> getPokemons() {
-        return new ArrayList<>(this.pokemonList);
+        return pokemons;
     }
+    public int pokeSize () {
+        return this.pokemons.size();
+    }
+
+    public int getNumOfBadges() {
+        return numOfBadges;
+    }
+
+    public void removeDeadPokemons() {
+        pokemons.stream()
+                .filter(pokemon -> pokemon.getHealth() > 0)
+                .collect(Collectors.toList());
+    }
+
 }
