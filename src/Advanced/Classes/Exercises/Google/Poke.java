@@ -8,4 +8,12 @@ public class Poke {
         this.pokemonName = pokemonName;
         this.pokemonType = pokemonType;
     }
+
+    public String getPokemonName() {
+        return pokemonName;
+    }
+
+    public String getPokemonType() {
+        return pokemonType;
+    }
 }
