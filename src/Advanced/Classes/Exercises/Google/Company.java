@@ -11,6 +11,18 @@ public class Company {
         this.salary = salary;
     }
 
+    public String getNameCompany() {
+        return company;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
     public void setCompany(String company) {
         this.company = company;
     }
@@ -21,5 +33,10 @@ public class Company {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s %.2f", this.company, this.department, this.salary);
     }
 }

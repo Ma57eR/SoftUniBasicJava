@@ -33,8 +33,6 @@ public class Person {
     }
 
 
-
-
     public Person(String name) {
         this.name = name;
         this.company = null;
@@ -74,5 +72,37 @@ public class Person {
 
     public void setPokemons(String pokeName, String pokeType) {
         getPokemons().put(pokeName, pokeType);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        //Person Name
+        sb.append(getName()).append(System.lineSeparator());
+        sb.append("Company:").append(System.lineSeparator());
+        if (this.company != null) {
+            sb.append(this.company.toString()).append(System.lineSeparator());
+        }
+        sb.append("Car:").append(System.lineSeparator());
+        if (this.car != null) {
+            car.forEach((key, value) -> sb.append(key).append(" ").append(value).append(System.lineSeparator()));
+        }
+        sb.append("Pokemon:").append(System.lineSeparator());
+        if (this.pokemons != null) {
+            pokemons.forEach((key, value) -> sb.append(key).append(" ").append(value).append(System.lineSeparator()));
+        }
+        sb.append("Parents:").append(System.lineSeparator());
+        if (this.parents != null) {
+            parents.forEach(p -> {
+                sb.append(p.getParentName()).append(" ").append(p.getParentBirthday()).append(System.lineSeparator());
+            });
+        }
+        sb.append("Children:").append(System.lineSeparator());
+        if (this.children != null) {
+        children.forEach(c -> {
+            sb.append(c.getChildName()).append(" ").append(c.getChildBirthday()).append(System.lineSeparator());
+        });
+        }
+    return sb.toString();
     }
 }

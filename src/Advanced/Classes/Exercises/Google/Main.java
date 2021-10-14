@@ -12,7 +12,7 @@ public class Main {
         Map<String, Person> persons = new LinkedHashMap<>();
 
         while (!command[0].equals("End")) {
-                //Person currentPerson = null;
+            //Person currentPerson = null;
             String name = command[0];
             switch (command[1]) {
                 case "company":
@@ -60,10 +60,33 @@ public class Main {
                     persons.get(name).setCar(currentCar);
                     break;
             }
-        command = scan.nextLine().split("\\s+");
+            command = scan.nextLine().split("\\s+");
         }
-
-        System.out.println();
+        System.out.println(persons.get(scan.nextLine()));
+//        for (Map.Entry<String, Person> person : persons.entrySet()) {
+//            System.out.println(person.getKey());
+//            System.out.println("Company");
+//
+//            System.out.println(person.getValue().getCompany().getNameCompany() + " "
+//                    + person.getValue().getCompany().getDepartment() + " "
+//                    + person.getValue().getCompany().getSalary());
+//            System.out.println("Car:");
+//            person.getValue().getCar().entrySet().forEach(car -> {
+//                System.out.println(car.getKey() + " " + car.getValue());
+//            });
+//            System.out.println("Pokemon:");
+//            person.getValue().getPokemons().forEach((k,v) -> {
+//                System.out.println(k + " " + v);
+//            });
+//            System.out.println("Parents:");
+//            person.getValue().getParents().forEach(par -> {
+//                System.out.println(par.getParentName() + " " + par.getParentBirthday());
+//            });
+//            System.out.println("Children:");
+//            person.getValue().getChildren().forEach(kid ->{
+//                System.out.println(kid.getChildName() + " " + kid.getChildBirthday());
+//            });
+//        }
     }
 }
 

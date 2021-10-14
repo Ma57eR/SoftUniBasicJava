@@ -8,4 +8,12 @@ public class Children {
         this.childName = childName;
         this.childBirthday = childBirthday;
     }
+
+    public String getChildName() {
+        return childName;
+    }
+
+    public String getChildBirthday() {
+        return childBirthday;
+    }
 }
